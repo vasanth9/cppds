@@ -6,4 +6,5 @@ int main()
     double y=double(x); //normal c style
     double z=(double)x; //c++ style
     cout<<x<<" "<<y<<" "<<z;
+    return 0;
 }
