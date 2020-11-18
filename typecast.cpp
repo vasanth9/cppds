@@ -7,4 +7,5 @@ int main()
     double z=(double)x; //c++ style
     cout<<x<<" "<<y<<" "<<z;
     return 0;
+    
 }
