@@ -96,7 +96,7 @@ void add()
     if(turn%2==0){
         cout<<"\nX turn:";
         
-        cin>>x>>y;
+        cin>>x>>y;x--;y--;
         if(x>2 || x<0 || y>2 || y<0)
         {
             cout<<"Index out of range.PLEASE CHOOSE AGAIN:\n";
@@ -125,6 +125,7 @@ void add()
 cout<<"\nO turn:";
         
         cin>>x>>y;
+        x--;y--;
         if(x>2 || x<0 || y>2 || y<0)
         {
             cout<<"Index out of range.PLEASE CHOOSE AGAIN:\n";
@@ -171,3 +172,25 @@ int main()
     }
    
 }
+/* how to play ??
+consider this 2d matrix with index starting with 1 ,
+1 1, 1 2, 1 3,
+
+2 1, 2 2, 2 3,
+
+3 1, 3 2, 3 3,
+
+enter the index x and y on your alternative turns.............
+
+Play as many number of times you want to wish
+
+
+
+
+   |   |   
+---+---+---
+   |   |   
+---+---+---
+   |   |   
+
+*/
