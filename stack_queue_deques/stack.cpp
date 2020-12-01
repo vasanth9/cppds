@@ -49,11 +49,24 @@ class ArrayStack{
     int t;
 
 };
+template<typename T>
+void vecrev(vector<T>&V)
+{
+    ArrayStack<T>S(V.size());
+    for(int i=0;i<V.size();i++)S.push(V[i]);
+    for(int i=0;i<V.size();i++){
+        cout<<S.top()<<"\n";S.pop();
+    }
+}
 int main()
 {
     ArrayStack<int>a;
     a.push(100);
-    cout<<a.top();
-   
+    cout<<a.top()<<"\n";
+
+   vector<int>v={100,100,400};
+   vector<char>t={'w','w','e'};
+   vecrev(v);
+   vecrev(t);
 
 }
