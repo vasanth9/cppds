@@ -5,6 +5,7 @@ struct Node
     int data;
     Node * right;
     Node * left;
+    Node * parent;
     Node(int d)
     {
         data=d;
@@ -22,6 +23,7 @@ void add(Node* r,Node *y)
         }
         else{
             y->left=r;
+            r->parent=y;
         }
     }
     else{
@@ -31,6 +33,7 @@ void add(Node* r,Node *y)
         }
         else{
             y->right=r;
+            r->parent=y;
         }
     }
 
@@ -63,6 +66,18 @@ void postorder(Node * y)
         cout<<y->data<<"\t";
     }
 }
+int depth(Node * root,Node * x)
+{
+    if(x==root)
+    {
+        return 0;
+    }
+    else
+    {
+        return 1 + depth(root,x->parent);
+    }
+    
+}
 
 int main()
 {
@@ -83,4 +98,7 @@ int main()
     cout<<"\n";
     postorder(root);
     cout<<"\n";
+    //cout<<depth(root,root->left->left);
+    cout<<height(root,root);
+
 }
